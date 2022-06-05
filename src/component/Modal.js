@@ -1,19 +1,18 @@
 import React,{useState} from "react";
 
-
 export default function Modal({ handleAddItem, isModalOpen, handleModalOpen }) {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
-  const [image, setImage] = useState("");
+  const [url, setUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleAddItem({ name, content, image });
+    handleAddItem({ name, content, url });
     handleModalOpen(false);
   };
 
   return (
-    <div id="modal" className="modal-overlay" hidden={!isModalOpen}>
+    <div id="modal" className="modalOverlay" hidden={!isModalOpen}>
       <div className="modal-window">
         <div className="title">
           <h2>모달</h2>
@@ -37,8 +36,8 @@ export default function Modal({ handleAddItem, isModalOpen, handleModalOpen }) {
             id="url"
             className="url"
             placeholder="URL"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
             required
           />
           <li>내용</li>
@@ -50,6 +49,8 @@ export default function Modal({ handleAddItem, isModalOpen, handleModalOpen }) {
             onChange={(e) => setContent(e.target.value)}
             required
           />
+          <br />
+          <br />
           <button type="submit" className="submit-button">
             Save
           </button>
