@@ -2,10 +2,12 @@
 import React from "react";
 
 export default function Main() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
       <main>
         <div className="sidebar">
-          <button id="btn-modal">추가</button>
+          <button id="btn-modal" type="button" className="btn">추가</button>
           <span>소주</span>
           <span>맥주</span>
           <span>샴페인</span>
