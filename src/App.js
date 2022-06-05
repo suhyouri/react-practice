@@ -57,7 +57,7 @@ export default function App() {
   // }
 
   return (
-    <>
+    <div id="root">
       <Header />
       <main>
         <div className="sidebar">
@@ -127,6 +127,6 @@ export default function App() {
         isModalOpen={isModalOpen}
         handleModalOpen={handleModalOpen}
       />
-    </>
+    </div>
   );
 }

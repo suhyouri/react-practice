@@ -23,6 +23,9 @@ code {
    box-sizing: border-box; 
 }
 
+#root {
+    height:100%
+}
 @font-face {
     font-family: '87MMILSANG-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201@1.0/87MMILSANG-Regular.woff2') format('woff2');
@@ -48,7 +51,7 @@ main{
     /* height:100%; */
     /* flex-direction: row nowrap; */
     height: 91.5vh;
-    /* height: calc(100% - 75px); */
+    height: calc(100% - 75px);
     /* background-color: blueviolet; */
 }
 
